@@ -1,0 +1,15 @@
+.medium-report {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    height: 125px;
+}
+
+.body {
+    display: flex;
+    flex-direction: row;
+
+    div {
+        width: 50%;
+    }
+}
