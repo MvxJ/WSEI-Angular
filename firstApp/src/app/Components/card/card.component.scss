@@ -4,4 +4,11 @@
     display: block;
     box-shadow: 5px 5px 10px lightgray;
     width: max-content;
+    margin: 5px;
+    cursor: pointer;
+}
+
+:host:hover {
+    transform: scale(1.05);
+    transition: 0.3s ease-in-out;
 }

@@ -1,19 +1,24 @@
 <p>Hello World!</p>
 <h1>Users list</h1>
-<app-card>
-    <app-small-report label="Total revenue" value="50,000" icon="customer.png" color="lightgreen"></app-small-report>
-</app-card>
 
-<app-card>
-    <app-small-report label="Revenue" value="1,250" icon="bag.png" color="purple"></app-small-report>
-</app-card>
+<div style="display:flex;width:max-content">
+    <app-card>
+        <app-small-report label="Total revenue" value="50,000" icon="customer.png" color="lightgreen" icon="shopping-cart.png"></app-small-report>
+    </app-card>
+    
+    <app-card>
+        <app-small-report label="Revenue" value="1,250" icon="bag.png" color="purple" icon="revenue.png"></app-small-report>
+    </app-card>
+</div>
 
-<app-card>
-    <app-medium-report label="Total earnings" value="39" prevValue="37"></app-medium-report>
-</app-card>
-
-<app-card>
-    <app-medium-report label="Products sold" value="2543" prevValue="2222"></app-medium-report>
-</app-card>
+<div style="display:flex;width:max-content">
+    <app-card>
+        <app-medium-report label="Total earnings" value="39" prevValue="37"></app-medium-report>
+    </app-card>
+    
+    <app-card>
+        <app-medium-report label="Products sold" value="2543" prevValue="2222"></app-medium-report>
+    </app-card>
+</div>
 
 <app-users-list></app-users-list>
