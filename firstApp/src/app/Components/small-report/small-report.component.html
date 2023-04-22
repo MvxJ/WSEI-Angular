@@ -1,11 +1,11 @@
 <div class="small-report">
     <div class="icon">
-        {{icon}}
+        <img src="assets/images/{{icon}}" />
     </div>
     <div class="body">
-        <div class="report-value" [ngStyle]="{'color': color}">
-            {{value}}<br>
-            {{label}}
+        <div class="report-value">
+            <span [ngStyle]="{'color': color}">{{value}}$</span>
+            <p>{{label}}</p>
         </div>
         <div class="report-menu">
             ...

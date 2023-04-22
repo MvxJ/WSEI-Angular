@@ -3,6 +3,7 @@
     display: flex;
     flex-direction: column;
     height: 125px;
+    color: lightgray;
 }
 
 .body {
@@ -11,5 +12,13 @@
 
     div {
         width: 50%;
+    }
+
+    .value {
+        color: black;
+    }
+
+    .image img {
+        width: 40%;
     }
 }

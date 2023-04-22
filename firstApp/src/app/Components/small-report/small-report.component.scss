@@ -1,25 +1,26 @@
 .small-report {
     width: 350px;
-    height: 75px;
+    height: 60px;
     display: flex;
     }
 
 .icon {
-    width: 50px;
+    width: 20%;
     overflow: hidden;
 }
 
 .body {
-    width: 300px;
+    width: 80%;
     display: flex;
     justify-content: center;
     padding: 5px;
 }
 
 .report-value {
-    width: 275px;
+    width: 90%;
+    color: lightgray;
 }
 
 .report-menu {
-    width: 25px;
+    width: 10%;
 }
