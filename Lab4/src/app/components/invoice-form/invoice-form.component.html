@@ -1,0 +1,84 @@
+<div [formGroup]="invoice">
+    <div formGroupName="customerData">
+        <h3>Customer data</h3>
+            <div>
+                Name: <input type="text" formControlName="name">
+            </div>
+            <div>
+                City: <input type="text" formControlName="city">
+            </div>
+            <div>
+                ZipCode: <input type="text" formControlName="zipCode">
+            </div>
+            <div>
+                Address: <input type="text" formControlName="address">
+            </div>
+            <div>
+                Nip: <input type="text" formControlName="nip">
+            </div>
+    </div>
+    
+    <div formGroupName="providerData">
+        <h3>Issuer data</h3>
+            <div>
+                Name: <input type="text" formControlName="issuerName">
+            </div>
+            <div>
+                City: <input type="text" formControlName="city">
+            </div>
+            <div>
+                ZipCode: <input type="text" formControlName="zipCode">
+            </div>
+            <div>
+                Address: <input type="text" formControlName="address">
+            </div>
+            <div>
+                Nip: <input type="text" formControlName="nip">
+            </div>
+            <div>
+                Account number: <input type="text" formControlName="accountNumber">
+            </div>
+    </div>
+
+    <div>
+        <h3>Invoice data</h3>
+        <div>
+            Numer faktury: <input type="text" formControlName="invoiceNumber">
+        </div>
+        <div>
+            Data wystawienia faktury: <input type="text" formControlName="invoiceDate">
+        </div>
+        <div>
+            Data sprzedaży: <input type="text" formControlName="sellDate">
+        </div>
+        <div>
+            Payment date: <input type="text" formControlName="paymentDate">
+        </div>
+        <div>
+            Payment method: <input type="text" formControlName="paymentMethod">
+        </div>
+        <div>
+            Cart value: <input type="number" formControlName="cartValue">
+        </div>
+    </div>
+
+    <div>
+        <h3>Items</h3>
+        <div *ngFor="let item of invoice.controls.items.controls" style="display: flex;">
+          <div>
+            Name: <input type="text" [formControl]="item.controls.name">
+          </div>
+          <div>
+            Quantity: <input type="text" [formControl]="item.controls.quantity">
+          </div>
+          <div>
+            Price: <input type="text" [formControl]="item.controls.price">
+          </div>
+          <div>
+            Value: {{ (item.controls.price.value ?? 0) * (item.controls.quantity.value ?? 0)}}
+          </div>
+        </div>
+      </div>
+
+    <button (click)="addItemToForm()">Add item</button>
+</div>
